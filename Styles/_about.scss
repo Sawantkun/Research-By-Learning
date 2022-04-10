@@ -18,17 +18,47 @@
         top: 300px;
         right: 50px;
         animation:float 2s ease-in-out infinite;
+        @include breakpoint(900px){
+            top: 100px;
+            left:100px;
+        }
+        @include breakpoint(600px){
+            top: 20px;
+        }
     }
     .cube5{
         bottom: 170px;
         right: 250px;
         animation:float 2s ease-in-out infinite;
+        @include breakpoint(1100px){
+            bottom: 200px;
+            right:250px;
+        }
+        @include breakpoint(900px){
+            bottom: 200px;
+            left:150px;
+        }
+        @include breakpoint(600px){
+            bottom: 350px;
+            left:100px;
+        }
     }
     .cube6{
         top:160px;
         right: 550px;
         animation:float 2s ease-in-out infinite;
-
+        @include breakpoint(1100px){
+            right: 350px;
+            top: 180px;
+        }
+        @include breakpoint(900px){
+            top: 350px;
+            right:150px;
+        }
+        @include breakpoint(650px){
+            top: 350px;
+            right:100px;
+        }
     }
     .bg-blue {
         height: 120vh;
@@ -66,6 +96,7 @@
                 color: var(--primary-color);
                 @include breakpoint(900px){
                     text-align: center;
+                    font-size: 3rem;
                 }
             }
             p:first-of-type{
@@ -77,6 +108,11 @@
                 color: var(--primary-color);
                 @include breakpoint(900px){
                     text-align: center;
+                    font-size: 0.9rem;
+                    max-width: 100%;
+                }
+                @include breakpoint(600px){
+                    font-size: 0.7rem;
                 }
             }
             button{
@@ -107,6 +143,10 @@
                 height: 100%;
                 width:100%;
                 z-index: 0;
+                @include breakpoint(900px){
+                    height: 450px;
+                    width: 450px;
+                }
             }
         }
     }

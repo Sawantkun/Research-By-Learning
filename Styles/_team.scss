@@ -32,6 +32,9 @@
         font-size: 3.5rem;
         padding-bottom:70px;
         color: var(--primary-color);
+        @include breakpoint(900px){
+             font-size: 2.5rem;
+        }
     }
 
     // swiper js styling 
@@ -54,6 +57,10 @@
             position: absolute;
             top: 0;
             left: -30px;
+            @include breakpoint(900px){
+              left: 230px;
+              top: 170px;
+            }
           }
           a {
             text-decoration: none;

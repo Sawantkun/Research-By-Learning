@@ -1,3 +1,4 @@
+@import "./breakpoints";
 #perks{
     width: 100%;
     height:120vh;
@@ -24,16 +25,31 @@
         bottom: 350px;
         left: 50px;
         animation:float 2s ease-in-out infinite;
+        @include breakpoint(1050px){
+            bottom: 500px;
+            left: 100px;
+        }
     }
     .cube8{
         bottom: 100px;
         left: 200px;
         animation:float 2s ease-in-out infinite;
+        @include breakpoint(1050px){
+            bottom: 200px;
+            left: 100px;
+        }
     }
     .cube9{
         top:130px;
         left: 450px;
         animation:float 2s ease-in-out infinite;
+        @include breakpoint(1050px){
+            top: 130px;
+            left: 550px;
+        }
+        @include breakpoint(600px){
+            left: 400px;
+        }
     }
     .perks-content{
         width: 100%;
@@ -41,9 +57,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        @include lg{
-            display: flex;
-            flex-direction: column;
+        @include breakpoint(1050px){
+          flex-direction: column;
         }
         .perks-left{
             width: 50%;
@@ -54,6 +69,10 @@
             img{
                 height: 60%;
                 width:60%;
+                @include breakpoint(1050px){
+                    height: 400px;
+                    width: 400px;
+                }
             }
         }
         .perks-right{
@@ -71,6 +90,9 @@
                 color: rgb(26, 24, 24);
                 padding-bottom: 15px;
                 color: var(--primary-color);
+                @include breakpoint(1050px){
+                    font-size: 2.5rem;
+                }
             }
             ul{
                 padding-left: 15px;
@@ -79,6 +101,11 @@
                     font-family: 'Noto Sans', sans-serif;
                    line-height: 27px;
                    color: var(--primary-color);
+                   @include breakpoint(1050px){
+                    line-height: 18px;
+                    font-size: 0.8rem;
+                    max-width: 100%;
+                }
                 }
             }
         }

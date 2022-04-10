@@ -65,6 +65,9 @@ html{
         transition: all 0.3s ease-in-out;
         background-color: transparent;
         z-index: 3;
+        @include breakpoint(600px){
+            padding: 0 5%;
+        }
 
         // left-side logo
         a{

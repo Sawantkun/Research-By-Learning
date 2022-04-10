@@ -1,3 +1,4 @@
+@import "./breakpoints";
 #details{
     width: 100%;
     height: 120vh;
@@ -37,17 +38,28 @@
         top: 200px;
         right: 250px;
         animation:float 2s ease-in-out infinite;
+        @include breakpoint(660px){
+          right: 200px;
+          top: 300px;
+        }
     }
     .cube8{
         bottom: 200px;
         right: 550px;
         animation:float 2s ease-in-out infinite;
+        @include breakpoint(660px){
+          right: 300px;
+          bottom: 250px;
+        }
     }
     .cube9{
         top:200px;
         left: 250px;
         animation:float 2s ease-in-out infinite;
-
+        @include breakpoint(660px){
+          left: 100px;
+          top: 250px;
+        }
     }
         .details-heading{
         display: flex;
@@ -57,6 +69,9 @@
         h1{
             font-size: 3.5rem;
             color: var(--primary-color);
+            @include breakpoint(660px){
+              font-size: 2.5rem;
+            }
         }
     }
     ul {
@@ -68,16 +83,17 @@
         display:flex;
         margin:0;
         padding:0;
-        @include breakpoint(900px){
-          display: flex;
-          flex-direction: column;
-          margin-right: 100px;
-        }
-      }
+    }
       
       ul li {
         list-style:none;
         margin:0 80px;
+        @include breakpoint(660px){
+          margin: 0 20px;
+        }
+        @include breakpoint(660px){
+          margin: 0 10px;
+        }
       }
       
       ul li a img {
