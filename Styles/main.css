@@ -945,7 +945,7 @@
 }
 
 #team {
-  height: 120vh;
+  height: 105vh;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1235,6 +1235,10 @@
 
 body::-webkit-scrollbar {
   display: none;
+}
+
+body {
+  background-color: black;
 }
 
 html {
