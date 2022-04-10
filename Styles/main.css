@@ -1406,6 +1406,12 @@ html {
           justify-content: center;
 }
 
+@media (max-width: 1190px) {
+  .main .nav .nav-links ul li a {
+    color: black;
+  }
+}
+
 .main .nav .nav-links ul li a:hover {
   color: blue;
 }
@@ -1499,7 +1505,7 @@ html {
   position: absolute;
   height: 2px;
   width: 85%;
-  background-color: black;
+  background-color: blue;
   border-radius: 10px;
 }
 
@@ -1520,7 +1526,7 @@ html {
 .main .line {
   height: 2px;
   width: 85%;
-  background-color: black;
+  background-color: blue;
   border-radius: 10px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;

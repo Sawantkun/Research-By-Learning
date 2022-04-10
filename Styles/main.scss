@@ -140,6 +140,9 @@ html{
                         align-items: center;
                         transition: all 0.3s ease-in-out;
                         justify-content: center;
+                        @include breakpoint(1190px){
+                            color: black;
+                        }
                         &:hover{
                             color: blue;
                         }
@@ -215,7 +218,7 @@ html{
         position: absolute;
         height: 2px;
         width: 85%;
-        background-color: black;
+        background-color: blue;
         border-radius: 10px;
     }
     .line::before{
@@ -229,7 +232,7 @@ html{
     .line{
         height: 2px;
         width: 85%;
-        background-color: black;
+        background-color: blue;
         border-radius: 10px;
         transition: all 0.3s ease-in-out;
     }
