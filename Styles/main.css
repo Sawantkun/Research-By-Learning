@@ -1467,7 +1467,7 @@ html {
           transform: translateX(10px) translateY(-15px);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  z-index: 3;
+  z-index: 1;
 }
 
 .main .parent {
