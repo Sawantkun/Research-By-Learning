@@ -1,0 +1,65 @@
+.swiper {
+    width: 100%;
+    height: 100%;
+    background-image: url(../Media/Icons/pattern.svg);
+      object-fit: cover;
+      background-size: cover;
+      background-position: bottom;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    height: 15rem !important;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px !important;
+    cursor: pointer;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .swiper-pagination-bullet:nth-child(odd) {
+    animation: loading 0.6s 0.2s linear infinite;
+  }
+  .swiper-pagination-bullet:nth-child(even) {
+    animation: loading 0.6s 0.1s linear infinite;
+  }
+  
+  @keyframes loading {
+    0% {
+      transform: translate(0);
+      background-color: #a6d1fa;
+    }
+    25% {
+      transform: translateY(-3px);
+    }
+    50% {
+      transform: translate(0);
+      background-color: #a6d1fa;
+    }
+    75% {
+      transform: translateY(3px);
+    }
+    100% {
+      transform: translate(0);
+    }
+  }

@@ -1,0 +1,240 @@
+// importing scss files
+@import "./home";
+@import "./about";
+@import "./details";
+@import "./perks";
+@import "./team";
+@import "./footer";
+@import "./breakpoints";
+
+//  importing fonts 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@font-face{
+    font-family: "Avenir";
+    src: url("../Media/Fonts/TTSupermolotNeue-ExtraBold.ttf");
+}
+
+// General styling
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+// Dark Mode 
+:root{
+    --primary-color:black;
+    --secondary-color:white;
+    --tertiary-color:#eef4fd;
+    --blue-color:blue;
+    --white-color:white;
+    --brown-color:white;
+    --light-brown:white;
+}
+.theme{
+    --primary-color:white;
+    --secondary-color:black;
+    --tertiary-color:rgb(0, 0, 97);
+    --blue-color:white;
+    --brown-color:rgb(15, 15, 15);
+    --white-color:rgb(0, 0, 41);
+    --light-brown:rgb(19, 18, 18);
+}
+
+// navbar styling
+.main{
+    .nav{
+        backdrop-filter: blur(20px);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 100px;
+        padding: 0 80px;
+        position: fixed;
+        transition: all 0.3s ease-in-out;
+        background-color: transparent;
+        z-index: 3;
+
+        // left-side logo
+        a{
+            text-decoration: none;
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+            justify-content:center;
+            z-index: 10;
+            cursor: pointer;
+            img{
+                width: 40px;
+            }
+            img:hover{
+                transform: translateY(-1px);
+            }
+            h1{
+                padding-left: 15px;
+                font-size: 2rem;
+                color: blue;
+                font-family: 'Noto Sans', sans-serif;
+                font-weight: 900;
+            }
+        }
+
+        // navbar links 
+        .nav-links{
+            @include breakpoint(1190px){
+                right: 0;
+                position: absolute;
+                top: 0;
+            }
+            ul{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                padding-right:60px ;
+                list-style: none;
+                @include breakpoint(1190px){
+                    display: none;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    height: 100vh;
+                    width:0px;
+                    z-index: 3;
+                    transform: translateX(25px);
+                    background: white;
+                    padding: 100px 0;
+                }
+                li{
+                    display: flex;
+                    padding-right: 35px;
+                    a{
+                        color: var(--primary-color);
+                        font-family: 'Noto Sans', sans-serif;
+                        text-decoration: none;
+                        position: relative;
+                        padding-bottom: 4px;
+                        display: flex;
+                        align-items: center;
+                        transition: all 0.3s ease-in-out;
+                        justify-content: center;
+                        &:hover{
+                            color: blue;
+                        }
+                    }
+                    a::after{
+                        content: '';
+                        position: absolute;
+                        height: 2px;
+                        width: 50%;
+                        opacity: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        background-color: blue;
+                        opacity: 0;
+                        margin:0 auto;
+                        transition:all 0.3s ease-in-out;
+                    }
+                    a:hover::after{
+                        opacity: 0.6;
+                        width: 30%;
+                    }
+                }
+            }
+        }
+
+        // right side mode switch toggle 
+        .nav-icon{
+            width: 30px;
+            @include breakpoint(1190px){
+                position: absolute;
+                right: 150px;
+            }
+            .sun{
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+            }
+            .sun:hover{
+                transform:rotateZ(45deg) ;
+            }
+            .moon{
+                cursor: pointer ;
+                display: none;
+                position: absolute;
+                transform: translateX(10px) translateY(-15px);
+                transition: all 0.2s ease-in-out;
+                z-index: 3;
+            }
+        }
+    }
+
+    // hamburger menu 
+    .parent{
+        display: none;
+        width: 40px;
+        height: 40px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top:30px;
+        right: 65px;
+        cursor:pointer;
+        z-index: 10;
+        pointer-events: all;
+        @include breakpoint(1190px){
+            display: flex;
+
+        }
+    }
+    .line::after,.line::before{
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 85%;
+        background-color: black;
+        border-radius: 10px;
+    }
+    .line::before{
+        transform: translateY(-8px);
+        transition: all 0.3s ease-in-out;
+    }
+    .line::after{
+        transform: translateY(8px);
+        transition: all 0.3s ease-in-out;
+    }
+    .line{
+        height: 2px;
+        width: 85%;
+        background-color: black;
+        border-radius: 10px;
+        transition: all 0.3s ease-in-out;
+    }
+    .open .line{
+        background-color: transparent;
+    }
+    .open .line::after{
+        transform: rotate(45deg);
+    }
+    .open .line::before{
+        transform: rotate(-45deg);
+    }
+    
+}

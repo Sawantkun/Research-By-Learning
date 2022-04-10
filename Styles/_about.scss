@@ -1,0 +1,113 @@
+@import "./breakpoints";
+#about{
+    width: 100%;
+    height:120vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    padding-top: 100px;
+    padding-bottom: 200px;
+    background-color: var(--secondary-color);
+    .cube4,.cube5,.cube6{
+        width: 50px;
+        position: absolute;
+    }
+    .cube4{
+        top: 300px;
+        right: 50px;
+        animation:float 2s ease-in-out infinite;
+    }
+    .cube5{
+        bottom: 170px;
+        right: 250px;
+        animation:float 2s ease-in-out infinite;
+    }
+    .cube6{
+        top:160px;
+        right: 550px;
+        animation:float 2s ease-in-out infinite;
+
+    }
+    .bg-blue {
+        height: 120vh;
+        width: 100%;
+        background: linear-gradient(110deg, var(--tertiary-color) 0%, var(--secondary-color) 60%, var(--secondary-color) 100%);
+        transform: skewY(5deg);
+        z-index: -3;
+        position: absolute;
+      }
+    .about-content{
+        width: 85%;
+        height:100vh;
+        padding-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include breakpoint(900px){
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        .about-left{
+            width: 50%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding-left: 20px;
+            @include breakpoint(900px){
+                align-items: center;
+            }
+            h1{
+                font-family: 'Noto Sans', sans-serif;
+                font-size: 3.5rem;
+                color: var(--primary-color);
+                @include breakpoint(900px){
+                    text-align: center;
+                }
+            }
+            p:first-of-type{
+                padding-top: 10px;
+                font-family: 'Noto Sans', sans-serif;
+                max-width: 90%;
+                font-size: 1rem;
+                line-height: 25px;
+                color: var(--primary-color);
+                @include breakpoint(900px){
+                    text-align: center;
+                }
+            }
+            button{
+                background: transparent;
+                border: 1px solid var(--blue-color);
+                padding: 9px 18px;
+                font-size: 0.9rem;
+                font-weight: bold;
+                color: var(--blue-color);
+                margin-top: 25px;
+                text-transform: uppercase;
+                cursor:pointer;
+                transition: all 0.3s ease-in-out;
+                &:hover{
+                    background-color: blue;
+                    color: white;
+                    border: 1px solid blue;
+                }
+            }
+        }
+        .about-right{
+            width: 50%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+                height: 100%;
+                width:100%;
+                z-index: 0;
+            }
+        }
+    }
+}
