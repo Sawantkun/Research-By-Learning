@@ -8,10 +8,6 @@
     position: relative;
     color: white;
     font-family: 'Noto Sans', sans-serif;
-    @include breakpoint(650px){
-        height: 100vh;
-        width: 100vw;
-    }
     img{
         width: 20px;
         margin-right: 10px;
@@ -42,8 +38,7 @@
         display: flex;
         @include breakpoint(650px){
             display: flex;
-            flex-direction: column;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
         }
         .footer-top-left{
@@ -51,9 +46,15 @@
             z-index: 2;
             h2{
                 padding-bottom: 10px;
+                @include breakpoint(650px){
+                    font-size: 1.2rem;
+                }
             }
             p{
                 line-height: 25px;
+                @include breakpoint(650px){
+                    font-size: 0.7rem;
+                }
             }
         }
         .footer-top-right{
@@ -61,10 +62,16 @@
             z-index: 2;
             h2{
                 padding-bottom: 10px;
+                @include breakpoint(650px){
+                    font-size: 1.2rem;
+                }
             }
             p{
                 line-height: 25px;
                 padding-bottom: 10px;
+                @include breakpoint(650px){
+                    font-size: 0.7rem;
+                }
             }
         }
     }
