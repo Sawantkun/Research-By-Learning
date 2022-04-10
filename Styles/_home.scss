@@ -77,10 +77,16 @@
         @include breakpoint(800px){
             font-size: 2.5rem;
         }
+        @include breakpoint(510px){
+            font-size: 2rem;
+        }
         span{
             color: blue;
             @include breakpoint(800px){
                 font-size: 2.5rem;
+            }
+            @include breakpoint(510px){
+                font-size: 2rem;
             }
         }
     }
@@ -94,6 +100,10 @@
         color: var(--primary-color);
         @include breakpoint(800px){
             font-size: 0.9rem;
+        }
+        @include breakpoint(800px){
+            font-size: 0.7rem;
+            max-width: 300px;
         }
     }
     .call-to-action{

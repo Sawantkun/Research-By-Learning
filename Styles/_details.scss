@@ -9,9 +9,9 @@
     .gradient{
       position: absolute;
       top:10%;
-      left: -10%;
-      width: 800px;
-      height:800px;
+      left: 10%;
+      width: 20%;
+      height:20%;
       border-radius: 50% 22% 40% 80%;
       filter: blur(100px);
       background: radial-gradient(circle at 50% 50%,blue,white);
@@ -40,7 +40,7 @@
         animation:float 2s ease-in-out infinite;
         @include breakpoint(660px){
           right: 200px;
-          top: 300px;
+          top: 250px;
         }
     }
     .cube8{
@@ -120,7 +120,7 @@
         text-decoration: none;
         display:absolute;
         display:block;
-        width:210px;
+        width:160px;
         height:80px;
         background: #fff;
         text-align:left;

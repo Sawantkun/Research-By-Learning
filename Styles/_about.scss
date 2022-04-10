@@ -147,6 +147,10 @@
                     height: 450px;
                     width: 450px;
                 }
+                @include breakpoint(650px){
+                    height: 250px;
+                    width: 250px;
+                }
             }
         }
     }

@@ -123,6 +123,7 @@ html{
                     transform: translateX(25px);
                     background: white;
                     padding: 100px 0;
+                    color: black;
                 }
                 li{
                     display: flex;
@@ -198,7 +199,7 @@ html{
         justify-content: center;
         position: fixed;
         top:30px;
-        right: 65px;
+        right: 75px;
         cursor:pointer;
         z-index: 10;
         pointer-events: all;

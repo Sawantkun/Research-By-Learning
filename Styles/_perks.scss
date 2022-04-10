@@ -47,8 +47,11 @@
             top: 130px;
             left: 550px;
         }
-        @include breakpoint(600px){
-            left: 400px;
+        @include breakpoint(620px){
+            left: 450px;
+        }
+        @include breakpoint(510px){
+            left: 350px;
         }
     }
     .perks-content{
@@ -70,8 +73,12 @@
                 height: 60%;
                 width:60%;
                 @include breakpoint(1050px){
-                    height: 400px;
-                    width: 400px;
+                    height: 300px;
+                    width: 300px;
+                }
+                @include breakpoint(650px){
+                    height: 200px;
+                    width: 200px;
                 }
             }
         }

@@ -1,6 +1,6 @@
 #footer{
     height: 50vh;
-    width: 100%;
+    width: 100vw;
     background: url(../Media/Images/header-bg.jpg);
     background-position: top;
     background-repeat: no-repeat;
@@ -10,6 +10,7 @@
     font-family: 'Noto Sans', sans-serif;
     @include breakpoint(650px){
         height: 100vh;
+        width: 100vw;
     }
     img{
         width: 20px;

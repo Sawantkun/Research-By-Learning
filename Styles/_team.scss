@@ -58,19 +58,27 @@
             top: 0;
             left: -30px;
             @include breakpoint(900px){
-              left: 230px;
+              left: 50px;
               top: 170px;
+              height: 40px;
+              width: 40px;
             }
           }
           a {
             text-decoration: none;
             color: var(--primary-color);
             position: relative;
+            @include breakpoint(510px){
+              font-size: 0.8rem;
+            }
             span {
                 margin: 5px 0 15px 0;
               font-size: 0.8rem;
               color: #3396ff;
               display: block;
+              @include breakpoint(510px){
+                font-size: 0.8rem;
+              }
             }
           }
         }
@@ -79,6 +87,9 @@
             text-align: left;
             font-size: 0.8rem;
             color: var(--primary-color);
+            @include breakpoint(510px){
+              font-size: 0.6rem;
+            }
           }
         }
       }
