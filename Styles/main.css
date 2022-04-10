@@ -516,8 +516,8 @@
   position: absolute;
   top: 10%;
   left: 10%;
-  width: 20%;
-  height: 20%;
+  width: 800px;
+  height: 800px;
   border-radius: 50% 22% 40% 80%;
   -webkit-filter: blur(100px);
           filter: blur(100px);
